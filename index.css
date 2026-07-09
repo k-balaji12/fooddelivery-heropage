@@ -3,18 +3,23 @@
     padding:0px;
     box-sizing: border-box;
 }
-body{
-    background-color:beige;
+html{
     scroll-behavior: smooth;
 }
+body{
+    background-color:beige;
+}
 .navbar{
-    width:auto;
-    height:55px;
+    width:100%;
+    min-height:55px;
+    height:auto;
     background-color: black;
     display:flex;
     justify-content: space-between;
     align-items: center;
-    padding:0px 40px;
+    padding:10px 40px;
+    flex-wrap: wrap;
+    gap: 15px;
 }
 .navigation{
     display:flex; 
@@ -24,7 +29,7 @@ body{
     font-size:20px;
     text-decoration: none;
     color:white;
-    font-weight:500px;
+    font-weight:500;
     transition: 0.3s;
 }
 .navigation a:hover{
@@ -36,8 +41,8 @@ body{
     background-color: aqua;
     color:black;
     font-size:15px;
-    font-weight:200px;
-    transition:0.3s #f5b53f;
+    font-weight:200;
+    transition: all 0.3s ease;
     cursor: pointer;
 }
 .btn:hover{
@@ -58,7 +63,7 @@ body{
     height:300px;
     width:100%;
     flex-grow:1;
-    flex-shrink: 1;;
+    flex-shrink: 1;
 }
 .heromatter{
     position :absolute;
@@ -67,7 +72,7 @@ body{
     width:500px;
     right:100px;
     color:white;
-    font-weight: 300px;
+    font-weight: 300;
     font-family: sans-serif;
     
 }
@@ -75,7 +80,7 @@ body{
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size:25px;
     color:rgba(255,193,7);
-    font-weight: 900px; 
+    font-weight: 900; 
 }
 .delic{
     font-family:'Supernova',sans-serif;
@@ -91,18 +96,17 @@ body{
     font-family:sans-serif;
     color:white;
     font-size:25px;
-    font-weight: 300px;
+    font-weight: 300;
 }
 .orderbtn{
     border-radius:30px;
     padding:10px;
     margin-top:10px;
     background-color:rgb(241, 188, 90);
-    transition:10s black ease-in;
+    transition: all 0.3s ease;
     cursor:pointer;
 }
 .orderbtn:hover{
-    transition:10s black ease-in;
     color:orange;
     background-color: black;
 }
@@ -115,10 +119,8 @@ body{
 }
 .items{
     display:flex;   
-    column-gap: 10px;
+    gap: 20px;
     margin:15px;
-    /* margin-left:300px;
-    margin-right:350px; */
     justify-content: center;
   
     flex-wrap:wrap;
@@ -154,14 +156,14 @@ div h5{
     font-size:15px;
 }
 div.descitems p{
-    font-family:'BR Sonama', sans-serif;
+    font-family:'BR Sonoma', sans-serif;
     font-size:14px;                             
 }
 #price{
     margin:10px 0px;
     color:#f5b53f;
     font-size:20px;
-    font-weight: 400px;
+    font-weight: 400;
 }
 .descitems button{
     font-family: Arial, Helvetica, sans-serif;
@@ -176,18 +178,19 @@ div.descitems p{
 }
 .why{
     display:flex;
-    margin:10px 40px;
-    /* border:5px solid black; */
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin:20px 40px;
 }
 
 .chooseus{
     display:flex;
-    /* height:10px; */
-    width:320px;
+    width:100%;
+    max-width:320px;
     border-radius:10px;
     flex-grow:1;
     flex-shrink: 1;
-    /* border:5px solid black; */
 }
 .imgdelivery>img{
     height:75px;
@@ -197,7 +200,7 @@ div.descitems p{
 }
 .imgdeliverydesc h5{
     font-size:20px;
-    font-weight:200px
+    font-weight: 200;
 }
 .imgdeliverydesc img{
     width:100px;
@@ -210,11 +213,14 @@ div.descitems p{
 .footer{
     background-color: black;
     color:white;
-    height:200px;
+    min-height:200px;
+    height:auto;
     display:flex;
-    flex-grow:1;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 40px 20px;
     justify-content: space-around;
-    align-items:center;
+    align-items: flex-start;
 }
 .footer p{
     font-family:Arial;
@@ -223,7 +229,7 @@ div.descitems p{
 }
 .footerdesc{
     width:250px;
-    font-family:'BR Sonama', sans-serif;  
+    font-family:'BR Sonoma', sans-serif;  
 }
 .links a{
     display:flex;
@@ -259,3 +265,121 @@ div>input{
     color:rgb(17, 16, 16);
     background-color: #eadddd;
 }
+
+/* RESPONSIVE DESIGN MEDIA QUERIES */
+
+@media (max-width: 1024px) {
+    .heromatter {
+        left: 50px;
+        right: 50px;
+        width: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        justify-content: center;
+        padding: 15px 20px;
+    }
+    .navigation {
+        gap: 25px;
+        justify-content: center;
+        width: 100%;
+    }
+    .navigation a {
+        font-size: 18px;
+    }
+    .login {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-top: 5px;
+    }
+    
+    .image>img {
+        height: 350px;
+        object-fit: cover;
+        filter: brightness(0.65);
+    }
+    .heromatter {
+        top: 30px;
+        left: 30px;
+        right: 30px;
+        width: auto;
+    }
+    .good {
+        font-size: 20px;
+    }
+    .delic, .deliv {
+        font-size: 42px;
+    }
+    .desc {
+        font-size: 18px;
+    }
+    
+    .why {
+        margin: 20px 20px;
+    }
+    .chooseus {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 15px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+    .imgdelivery>img {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 30px 15px;
+    }
+    .footerdesc, .links, .ourmenu, .followus {
+        width: 100%;
+        max-width: 280px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 10px 15px;
+    }
+    .navigation {
+        gap: 15px;
+    }
+    .navigation a {
+        font-size: 16px;
+    }
+    
+    .image>img {
+        height: 320px;
+    }
+    .heromatter {
+        top: 20px;
+        left: 15px;
+        right: 15px;
+    }
+    .good {
+        font-size: 16px;
+    }
+    .delic, .deliv {
+        font-size: 32px;
+    }
+    .desc {
+        font-size: 14px;
+    }
+    .orderbtn {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
+
